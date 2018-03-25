@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="zhutao">
+    <title>首页</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style type="text/css">
+        html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(../static/img/timg.jpg) no-repeat bottom center;background-color: #000;background-size: cover;}
+        .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+        .my-navbar a{background:transparent !important;color: #17a779 !important}
+        .my-navbar a:hover {color: #11aaee !important;background:transparent;outline:0}
+        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
+        .top-nav {padding:0;background:#000;}
+        .navbar-header >  a { font-size: 28px}
+        .navbar-nav > li > a {font-size: 20px}
+        button.navbar-toggle {background-color:#fbfbfb;}/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+        button.navbar-toggle > span.icon-bar {background-color:#dedede}
+        .login-box {
+            position: absolute;
+            top: 150px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 8px 8px 16px;
+        }
+        .logins {
+            height: 259px;
+            width: 360px;
+            padding: 50px 40px 40px 40px;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">原创文学</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">原创故事</a></li>
+                <li><a href="#">热门专题</a></li>
+                <li><a href="#">欣赏美文</a></li>
+                <li><a href="#">赞助</a></li>
+                <li><a href="#">&nbsp;&nbsp;</a></li>
+                <li><a href="javascript:document.getElementById('zhutao_login').style.display = 'block'" id="login_btn">登录</a></li>
+                <li><a href="#" class="btn btn-default" id="register_btn">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="bg"></div>
+
+<script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+    $(window).scroll(function () {
+        if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
+        }else {$(".navbar-fixed-top").removeClass("top-nav");}
+    });
+</script>
+</body>
+</html>
